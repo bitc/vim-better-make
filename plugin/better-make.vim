@@ -38,7 +38,7 @@ function! s:Make(bang, arg)
     " Open the quickfix window and jump to it
     copen
     " Jump to the first error (see :help quickfix)
-    :.cc
+    .cc
   endif
 endfunction
 
