@@ -3,9 +3,6 @@
 " Version:      0.1
 
 function! s:Make(bang, arg)
-  " Save the original position of the cursor
-  let l:saved_cursor = getpos(".")
-
   " Execute the builtin make command
   exe "make!" a:arg
 
@@ -20,8 +17,6 @@ function! s:Make(bang, arg)
 
   if !l:recognized_errors
     cclose
-    " Restore the cursor to the previously saved position
-    call setpos('.', l:saved_cursor)
     return
   endif
 
