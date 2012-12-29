@@ -42,4 +42,4 @@ function! s:Make(bang, arg)
   endif
 endfunction
 
-command! -bang -nargs=* Make call <SID>Make('<bang>', '<args>')
+command! -bang -bar -nargs=* Make call <SID>Make('<bang>', '<args>')
